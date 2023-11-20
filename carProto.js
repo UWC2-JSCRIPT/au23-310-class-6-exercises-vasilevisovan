@@ -12,9 +12,11 @@ class Car {
     }
     // Method to accelerate the car
     accelerate() {
-      this.speed += 10;
-      console.log(`${this.model} is accelerating. Current speed: ${this.speed} km/h`);
-    };
+        // Generate a random speed between 1 and 50 (for example)
+        const randomSpeed = Math.floor(Math.random() * 50) + 1;
+        this.speed += randomSpeed;
+        console.log(`${this.model} is accelerating. Current speed: ${this.speed} km/h`);
+      }
   
     // Method to brake the car
     brake() {
@@ -50,5 +52,12 @@ class Car {
  * @constructor
  * @param {String} model
  */
-
 //  Create an instance, accelerate twice, brake once, and console log the instance.toString()
+const myCarRivianR1T = new Car("Rivian R1T");
+
+myCarRivianR1T.accelerate();
+myCarRivianR1T.accelerate();
+
+myCarRivianR1T.brake();
+
+console.log(myCarRivianR1T.toString());
